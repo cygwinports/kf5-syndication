@@ -1,0 +1,22 @@
+inherit kf5
+
+NAME="kf5-syndication"
+VERSION=17.04.3
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE RSS/Atom parser library"
+DESCRIPTION="syndication is a KDE parser library for RSS and Atom feeds."
+
+PKG_NAMES="libKF5Syndication5 libKF5Syndication-devel"
+libKF5Syndication5_CONTENTS="
+	usr/bin/cygKF5Syndication-5.dll
+	usr/share/doc/${NAME}
+"
+libKF5Syndication_devel_REQUIRES="libQt5Core-devel"
+libKF5Syndication_devel_CONTENTS="
+	usr/include/KF5/Syndication/
+	usr/include/KF5/syndication_version.h
+	usr/lib/cmake/KF5Syndication/
+	usr/lib/libKF5Syndication.dll.a
+	usr/lib/qt5/mkspecs/modules/qt_Syndication.pri
+"
